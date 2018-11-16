@@ -8,7 +8,7 @@ class AnagramAntigram
 
   def anagram(word_one, word_two)
 
-     if ((word_one.to_s !~ /aeiouy/) || (word_two.to_s !~ /aeiouy/))
+     if ((word_one.to_s !~ /a|e|i|o|u|y/) || (word_two.to_s !~ /a|e|i|o|u|y/))
        "Not a word"
      elsif
        word_one.downcase.split("").sort.join == word_two.downcase.split("").sort.join
@@ -18,7 +18,7 @@ class AnagramAntigram
      end
 
 
-     
+
    end
     # word_one.chars.count {|c| c =~ /[aeiouy]/i}
     # if

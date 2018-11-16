@@ -13,7 +13,7 @@ describe ('anagram') do
   end
 
   it('Check if input is word') do
-    expect(anagram("thbr", "wuww")).to(eq("This isn't a word"))
+    expect(anagram("thbr", "wuww")).to(eq("Not a word"))
   end
 
   it('Check if inputs are Antigrams') do
