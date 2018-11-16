@@ -17,15 +17,19 @@ end
 describe ('is_word') do
 
   it('Check if input is word') do
-    expect(is_word("eat")).to(eq("Is word"))
+    expect(is_word("eat", "tea")).to(eq("Is word"))
+    #   it('Check for/ does not include punctuation in anagram/antigram') do
+    #     expect(anagram("hi", "!")).to(eq("hi"))
+    #   end
+    # end
   end
 end
-
-describe ('antigram')
-  it('Check if inputs are Antigrams') do
-    expect(antigram("hi", "bye")).to(eq("Antigram"))
-  end
-end
+#
+# describe ('antigram')
+#   it('Check if inputs are Antigrams') do
+#     expect(antigram("hi", "bye")).to(eq("Antigram"))
+#   end
+# end
 
 #   it('Check for/ does not include punctuation in anagram/antigram') do
 #     expect(anagram("hi", "!")).to(eq("hi"))
