@@ -7,9 +7,13 @@ class AnagramAntigram
 
 
 
-  def anagram(word_one, word_two)
+  def anagram(words)
+    temp_array = []
+    words_array = words.downcase.to_s.split(//)
 
-   word_one.chars.sort.join == word_two.chars.sort.join
+    words_array.delete_if{|i| i == "." || i == "," || i == "?" || i == "!" || i == ":" || i == "'"}.push(temp_array)
+   # word_one.chars.sort.join == word_two.chars.sort.join
+   return words_array
 end
 
     # Use this later??
