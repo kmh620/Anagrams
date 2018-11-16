@@ -24,12 +24,12 @@ describe ('is_word') do
     # end
   end
 end
-#
-# describe ('antigram')
-#   it('Check if inputs are Antigrams') do
-#     expect(antigram("hi", "bye")).to(eq("Antigram"))
-#   end
-# end
+
+describe ('antigram') do
+  it('Check if inputs are Antigrams') do
+    expect(antigram("hi", "bye")).to(eq("Antigram"))
+  end
+end
 
 #   it('Check for/ does not include punctuation in anagram/antigram') do
 #     expect(anagram("hi", "!")).to(eq("hi"))

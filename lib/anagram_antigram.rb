@@ -13,10 +13,11 @@ class AnagramAntigram
     word_one.to_s =~ /a|e|i|o|u|y/ || word_two.to_s =~ /a|e|i|o|u|y/
         "Is word"
   end
-  #
-  # def antigram(word_one, word_two)
-  #
-  # end
+
+  def antigram(word_one, word_two)
+    word_one.downcase.split("").sort.join != word_two.downcase.split("").sort.join
+      "Antigram"
+  end
 
 
    #  temp_array = []
