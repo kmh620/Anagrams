@@ -8,7 +8,7 @@ class AnagramAntigram
 
   def anagram(word_one, word_two)
     word_one.downcase.split("").sort.join == word_two.downcase.split("").sort.join
-     "Anagram!"
+     "Anagram"
    end
    #  temp_array = []
    #  word1_array = word_one.downcase.split("").sort
