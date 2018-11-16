@@ -3,18 +3,21 @@ require ('rspec')
 require ('pry')
 require ('anagram_antigram.rb')
 
-describe ('anagram_antigram') do
+describe ('anagram') do
 
-  it('Changes all letters of input to uppercase, creates in array') do
-    expect(anagram_antigram("Hello")).to(eq(["H", "E", "L", "L", "O"]))
+  it('Changes input to same capitalization') do
+    expect(anagram_antigram("Hello")).to(eq("HELLO"))
   end
-  it('Checks if two words are anagrams') do
-    expect(anagram_antigram("tea", "eat")).to(eq(true))
+  it('Check if input is word') do
+    expect(anagram_antigram("Hello")).to(eq(true))
+  end
+  it('Check if inputs are Anagrams') do
+    expect(anagram_antigram("tea, eat")).to(eq(true))
+  end
+  it('Check if inputs are Antigrams') do
+    expect(anagram_antigram("hi, bye")).to(eq(true))
+  end
+  it('Check multiple word string for anagrams & antigrams') do
+    expect(anagram_antigram("hi, tea, eat, bye")).to(eq(true))
   end
 end
-#
-# describe ('is_word') do
-#   it ('Checks if input is a word- looks for vowels') do
-#     expect(anagram_antigram("Hello")).to(eq("This is a word"))
-#   end
-# end
