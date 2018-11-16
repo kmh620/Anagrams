@@ -11,7 +11,10 @@ class AnagramAntigram
       if
         word_one.downcase.split("").sort.join == word_two.downcase.split("").sort.join
          "Anagram"
+      else
+        "Antigram"
       end
+
      end
     # output_array = Array.new(0)
     # words.each do |w2|
