@@ -1,11 +1,11 @@
 class AnagramAntigram
   def initialize(input)
     @input = input
-    end
   end
+end
 
   def anagram(word_one, word_two)
-    word_one.downcase.split("").sort.join == word_two.downcase.split("").sort.join
+    word_one.delete_if{|i| i == [/ "!" | "?" | "," | "."/ ]}.downcase.split("").sort.join == word_two.delete_if{|i| i == [/ "!" | "?" | "," | "."/ ]}.downcase.split("").sort.join
      "Anagram"
    end
 
@@ -18,13 +18,3 @@ class AnagramAntigram
     word_one.downcase.split("").sort.join != word_two.downcase.split("").sort.join
       "Antigram"
   end
-
-# def punctuation(word_one, word_two)
-#     temp_array = []
-#     word_array = word_one.downcase.concat(word_two).split("").sort
-#
-#
-#     temp_array.push(word_array.delete_if{|i| i == "." || i == "," || i == "?" || i == "!" || i == ":" || i == "'"}.join(" "))
-#
-#     temp_array
-#     end

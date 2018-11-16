@@ -10,6 +10,8 @@ describe ('anagram') do
   it('Changes input to same capitalization, create array') do
     expect(anagram("Tea", "EAt")).to(eq("Anagram"))
   end
+  it('Does not include punctuation') do
+    expect(anagram("Tea,", "EAt!")).to(eq("Anagram"))
 end
 
 describe ('is_word') do
@@ -23,9 +25,3 @@ describe ('antigram') do
     expect(antigram("hi", "bye")).to(eq("Antigram"))
   end
 end
-
-# describe ('punctuation') do
-#   it('Check for/ does not include punctuation in anagram/antigram') do
-#     expect(anagram("hi", "!")).to(eq("hi"))
-#   end
-# end

@@ -15,12 +15,10 @@
 * _Run rspec for tests_
 
 
-
-
-
 ### Technologies Used
 
 _GitHub, Ruby_
+
 
 
 
