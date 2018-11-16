@@ -9,9 +9,9 @@ class AnagramAntigram
 
   def anagram(words)
     temp_array = []
-    words_array = words.downcase.to_s.split(//)
+    words_array = words.downcase.split("")
 
-    words_array.delete_if{|i| i == "." || i == "," || i == "?" || i == "!" || i == ":" || i == "'"}.push(temp_array)
+    # words_array.delete_if{|i| i == "." || i == "," || i == "?" || i == "!" || i == ":" || i == "'"}.push(temp_array)
    # word_one.chars.sort.join == word_two.chars.sort.join
    return words_array
 end

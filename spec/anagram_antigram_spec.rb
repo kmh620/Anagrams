@@ -5,8 +5,8 @@ require ('anagram_antigram.rb')
 
 describe ('anagram') do
 
-  it('Changes input to same capitalization') do
-    expect(anagram("Tea Eat")).to(eq("tea eat"))
+  it('Changes input to same capitalization, create array') do
+    expect(anagram("Tea")).to(eq(["t", "e", "a"]))
   end
   it('Check if input is word') do
     expect(anagram("tea eat")).to(eq(true))
