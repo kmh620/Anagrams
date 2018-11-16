@@ -17,7 +17,7 @@ describe ('anagram') do
   end
 
   it('Check if inputs are Antigrams') do
-    expect(anagram("hi", "bye")).to(eq("Antigram!"))
+    expect(anagram("hi", "bye")).to(eq("Antigram"))
   end
 
   it('Check for/ does not include punctuation in anagram/antigram') do
