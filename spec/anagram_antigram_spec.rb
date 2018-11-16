@@ -13,6 +13,7 @@ describe ('anagram') do
   it('Does not include punctuation') do
     expect(anagram("Tea,", "EAt!")).to(eq("Anagram"))
 end
+end
 
 describe ('is_word') do
   it('Check if input is word') do

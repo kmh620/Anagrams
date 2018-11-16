@@ -5,7 +5,7 @@ class AnagramAntigram
 end
 
   def anagram(word_one, word_two)
-    word_one.delete_if{|i| i == [/ "!" | "?" | "," | "."/ ]}.downcase.split("").sort.join == word_two.delete_if{|i| i == [/ "!" | "?" | "," | "."/ ]}.downcase.split("").sort.join
+    word_one.gsub(/[[:punct:]]/, '').downcase.split("").sort.join == word_two.gsub(/[[:punct:]]/, '').downcase.split("").sort.join
      "Anagram"
    end
 
