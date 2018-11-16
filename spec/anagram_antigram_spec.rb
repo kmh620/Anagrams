@@ -13,7 +13,7 @@ describe ('anagram') do
   end
 
   it('Check if input is word') do
-    expect(anagram("tea", "EAt")).to(eq(true))
+    expect(anagram("thbr", "wuww")).to(eq("This isn't a word"))
   end
 
   it('Check if inputs are Antigrams') do
@@ -21,6 +21,6 @@ describe ('anagram') do
   end
 
   it('Check for/ does not include punctuation in anagram/antigram') do
-    expect(anagram("hi", "!", "tea?", "eat", "bye")).to(eq("'hi', 'tea', 'eat', 'bye'"))
+    expect(anagram("hi", "!")).to(eq("hi!"))
   end
 end
