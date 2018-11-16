@@ -10,10 +10,13 @@ class AnagramAntigram
   def anagram(words)
     temp_array = []
     words_array = words.downcase.split("")
+    words_array.each do |letter|
+    if letter.include?('a' || 'e' || 'i' || 'o' || 'u' || 'y')
+      return true
 
-    # words_array.delete_if{|i| i == "." || i == "," || i == "?" || i == "!" || i == ":" || i == "'"}.push(temp_array)
+    # temp_array.push(words_array.delete_if{|i| i == "." || i == "," || i == "?" || i == "!" || i == ":" || i == "'"}.join(" "))
    # word_one.chars.sort.join == word_two.chars.sort.join
-   return words_array
+
 end
 
     # Use this later??
@@ -25,3 +28,5 @@ end
   #   check_array
   # end
   #  End Use this later??
+end
+end
