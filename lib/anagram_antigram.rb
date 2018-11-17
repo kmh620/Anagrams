@@ -11,8 +11,11 @@ def anagram(word_one, word_two)
  end
 
 def is_word(word_one, word_two)
-  word_one.to_s =~ /a|e|i|o|u|y/ || word_two.to_s =~ /a|e|i|o|u|y/
+  if word_one.to_s =~ /a|e|i|o|u|y/ || word_two.to_s =~ /a|e|i|o|u|y/
       "Is word"
+  elsif word_one.to_s !~ /a|e|i|o|u|y/ || word_two.to_s !~ /a|e|i|o|u|y/
+      "Is not word"
+  end
 end
 
 def antigram(word_one, word_two)

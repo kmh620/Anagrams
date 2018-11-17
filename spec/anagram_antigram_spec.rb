@@ -18,6 +18,7 @@ end
 describe ('is_word') do
   it('Check if input is word') do
     expect(is_word("eat", "tea")).to(eq("Is word"))
+    expect(is_word("rrr", "thth")).to(eq("Is not word"))
   end
 end
 
