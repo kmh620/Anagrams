@@ -21,9 +21,9 @@ end
 describe ('is_word') do
   it('Check if input is word') do
     word = AnagramAntigram.new("eat", "tea")
-    expect(word.is_word()).to(eq("Is word"))
+    expect(word.is_word()).to(eq(true))
     words = AnagramAntigram.new("rrr", "thth")
-    expect(words.is_word()).to(eq("Is not word"))
+    expect(words.is_word()).to(eq(false))
   end
 end
 
