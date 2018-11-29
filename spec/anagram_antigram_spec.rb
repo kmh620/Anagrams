@@ -13,22 +13,23 @@ describe ('anagram') do
     expect(word.anagram()).to(eq("Anagram"))
   end
   it('Does not include punctuation') do
-    cat = Cat.new("Milo", 15)
-    expect(anagram("Tea,", "EAt!")).to(eq("Anagram"))
+    word = AnagramAntigram.new("Tea,", "EAt!")
+    expect(word.anagram()).to(eq("Anagram"))
   end
 end
 
 describe ('is_word') do
   it('Check if input is word') do
-    cat = Cat.new("Milo", 15)
-    expect(is_word("eat", "tea")).to(eq("Is word"))
-    expect(is_word("rrr", "thth")).to(eq("Is not word"))
+    word = AnagramAntigram.new("eat", "tea")
+    expect(word.is_word()).to(eq("Is word"))
+    words = AnagramAntigram.new("rrr", "thth")
+    expect(words.is_word()).to(eq("Is not word"))
   end
 end
 
 describe ('antigram') do
   it('Check if inputs are Antigrams') do
-    cat = Cat.new("Milo", 15)
-    expect(antigram("hi", "bye")).to(eq("Antigram"))
+    word = AnagramAntigram.new("hi", "bye")
+    expect(word.antigram()).to(eq("Antigram"))
   end
 end
