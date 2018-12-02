@@ -33,6 +33,9 @@ describe('#anagram_antigram') do
     expect(test6.check_anagram()).to(eq("Anagrams"))
   end
 
-
+  it('Alert if neither angram or antigram') do
+    test7 = Anagram.new("hello", "help")
+    expect(test7.check_anagram()).to(eq("Neither"))
+  end
 
 end

@@ -38,13 +38,13 @@ class Anagram
       intersection = (check_array1 & check_array2)
       if intersection.empty? == true
         return  "Antigrams"
-      else check_word1 == true && check_word2 == true
-        if check_array1 == check_array2
-          return "Anagrams"
+      elsif (check_word1 == true && check_word2 == true) && (check_array1 == check_array2)
+        return "Anagrams"
+      else (check_word1 == true && check_word2 == true) && (check_array1 != check_array2)
+          return "Neither"
         end
       end
+
     end
 
   end
-
-end
