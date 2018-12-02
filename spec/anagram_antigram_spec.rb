@@ -18,5 +18,21 @@ describe('#anagram_antigram') do
     expect(test2.is_word("tthth")).to(eq(false))
   end
 
+  it('Alert if words do not both contain vowels') do
+    test4 = Anagram.new("dog", "ddgg")
+    expect(test4.check_anagram()).to(eq("Words must contain vowels"))
+  end
+
+  it('Alert if Antigram = no matching letters') do
+    test5 = Anagram.new("hi", "bye")
+    expect(test5.check_anagram()).to(eq("Antigrams"))
+  end
+
+  it('Alert if Anagram = all matching letters') do
+    test6 = Anagram.new("cat", "act")
+    expect(test6.check_anagram()).to(eq("Anagrams"))
+  end
+
+
 
 end

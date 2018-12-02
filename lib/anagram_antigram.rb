@@ -24,21 +24,27 @@ class Anagram
     end
   end
 
-end
+  def check_anagram
+    removed1 = remove_punct(@word1)
+    removed2 = remove_punct(@word2)
+    check_word1 = is_word(removed1)
+    check_word2 = is_word(removed2)
+    check_array1 = removed1.split('')
+    check_array2 = removed2.split('')
 
-#
-#   def check_anagram
-#     check_word1 = is_word.remove_pun(@word1)
-#     check_word2 = is_word(@word2)
-#
-#     if check_word1 == true && check_word2 == true
-#       if (check_word1 && check_word2).empty?
-#       return  "Antigrams"
-#     elsif !(check_word1 && check_word2).empty?
-#        check_word1.length == check_word2.length
-#        return "Anagrams"
-#      else "Neither"
-#      end
-#     end
-#   end
-# end
+    if check_word1 == false || check_word2 == false
+      return "Words must contain vowels"
+    else check_word1 == true && check_word2 == true
+      intersection = (check_array1 & check_array2)
+      if intersection.empty? == true
+        return  "Antigrams"
+      else check_word1 == true && check_word2 == true
+        if check_array1 == check_array2
+          return "Anagrams"
+        end
+      end
+    end
+
+  end
+
+end
