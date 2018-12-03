@@ -1,7 +1,5 @@
 class Anagram
 
-  # attr_accessor(:word1, :word2)
-
   def initialize(word1, word2)
     @word1 = word1
     @word2 = word2
@@ -9,16 +7,16 @@ class Anagram
 
 
   def remove_punct(word)
-      no_punct = word.gsub(/[[:punct:]]/, '').downcase.split("").sort.join
-      if no_punct != nil
-        return no_punct
-      end
+    no_punct = word.gsub(/[[:punct:]]/, '').downcase.split("").sort.join.strip()
+    if no_punct != nil
+      return no_punct
+    end
   end
 
   def is_word(word)
     this_word = word
     if this_word.to_s !~ /a|e|i|o|u|y/
-        return false
+      return false
     else
       return true
     end
@@ -44,7 +42,5 @@ class Anagram
           return "Neither"
         end
       end
-
     end
-
   end

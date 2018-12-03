@@ -3,12 +3,15 @@ require ('rspec')
 require ('pry')
 require ('anagram_antigram.rb')
 
-
-
 describe('#anagram_antigram') do
   it('Remove punctuation from input words, sorts') do
+    test = Anagram.new("word1", "word2")
+    expect(test.remove_punct("d#og!,,")).to(eq("dgo"))
+  end
+
+  it('Adjusts words with different capitalization') do
     test1 = Anagram.new("word1", "word2")
-    expect(test1.remove_punct("d#og!,,")).to(eq("dgo"))
+    expect(test1.remove_punct("DoG")).to(eq("dgo"))
   end
 
   it('Check if word contains vowels = is a word') do
@@ -38,4 +41,12 @@ describe('#anagram_antigram') do
     expect(test7.check_anagram()).to(eq("Neither"))
   end
 
+  it('Checks phrase of words for anagrams/ antigrams') do
+    test8 = Anagram.new("dynamite", "may it end")
+    expect(test8.check_anagram()).to(eq("Anagrams"))
+    test9 = Anagram.new("Go away", "Never!")
+    expect(test9.check_anagram()).to(eq("Antigrams"))
+    test10 = Anagram.new("How are you?", "I'm good, how are you?")
+    expect(test10.check_anagram()).to(eq("Neither"))
+  end
 end
