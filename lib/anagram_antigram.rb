@@ -5,7 +5,6 @@ class Anagram
     @word2 = word2
   end
 
-
   def remove_punct(word)
     no_punct = word.gsub(/[[:punct:]]/, '').downcase.split("").sort.join.strip()
     if no_punct != nil
